@@ -145,9 +145,13 @@ input[type='color']::-webkit-color-swatch {
   width: 60%;
 }
 
-.range{
+.rangediv{
   display: flex;
   flex-direction: column;
+}
+.value{
+  align-self: center;
+  font-size: 20px;
 }
 #number{
   align-self: center;
