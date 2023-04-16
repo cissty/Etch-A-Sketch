@@ -7,11 +7,39 @@
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ca26679566.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="container"> </div>
-    <div id="settings">
-        <div id="draggable" draggable="true"></div>
-    </div>
+    <header>
+        <h1 class="title"> Etch-a-sketch</h1>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div id="settings">
+                <input id="colorpicker" type="color" value="#333333" id="style">
+                <button id="Colormode" class="button">Color mode</button>
+                <button id="rainbow" class="button">Rainbow mode</button>
+                <button id="eraser" class="button">Eraser</button>
+                <button id="clear" class="button">Clear the box</button>
+                <div class="range">
+                <div id="sizeValue" class="size-value">64 x 64</div>
+                <input type="range" min="1" max="64" value="16" step="1" class="drag">
+    
+                </div>
+    
+            </div>
+    
+            <div id="container"> </div>        
+        </div>
+    </main>
+   
+
+    <footer class="footer">
+        <p><strong>Copyright © 2023 Cissty</strong></p>
+        <a href="https://github.com/cissty" target="_blank">
+            <i class="fa-brands fa-github" style="color: #000000;" aria-hidden="true"></i>
+        </a>
+    </footer>
 </body>
 </html>

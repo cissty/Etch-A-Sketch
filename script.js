@@ -4,5 +4,3 @@
 // will be a reset button to remove everything but keep the grids.
 //
 const grid = document.getElementById('container');
-
-grid.setAttribute('style', 'border: 10px solid red');
