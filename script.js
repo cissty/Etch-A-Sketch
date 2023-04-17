@@ -9,6 +9,10 @@
 const sliderElement = document.querySelector("#range");
 const sliderValue = document.querySelector(".value");
 const grid = document.getElementById('container');
+
+
+
+
 let tempSliderValue = sliderElement.value;
 
 function forSlider(){
@@ -25,13 +29,25 @@ let newDivs = document.createElement('div');
 
   //creating new div//
 function createDivs() {
-  
-    for (let i = 0; i < tempSliderValue * tempSliderValue; i++){
-      newDivs = document.createElement('div');
+  const elements = document.getElementsByClassName('newDiv');
+  while(elements.length > 0){
+      elements[0].parentNode.removeChild(elements[0]);
+  }
 
-      newDivs.classList.add('newDiv');
-      grid.appendChild(newDivs);
-    };
+  let createdDivs = []; //4*4 16
+  
+  for(let i = 0 ; i< tempSliderValue*tempSliderValue ; i++){
+    const newDivs = document.createElement('div');
+    newDivs.classList.add('newDiv');
+    createdDivs.push(newDivs);
+  }
+
+  createdDivs.forEach(element => {
+    grid.appendChild(element);
+  });
+
+  let createdDivCount = document.getElementsByClassName('newDiv').length;
+  console.log('tempSliderValue - created',tempSliderValue, createdDivCount);
 }
 
 ////
@@ -56,9 +72,9 @@ function createDivs() {
 
 });
 
-allDivs.addEventListener('mousedown', () =>{
-  allDivs.style.backgroundColor = 'black';
-  allDivs.addEventListener('mouseover', () => {
-    allDivs.style.backgroundColor = 'blue';
-  });
-});
+// allDivs.addEventListener('mousedown', () =>{
+//   allDivs.style.backgroundColor = 'black';
+//   allDivs.addEventListener('mouseover', () => {
+//     allDivs.style.backgroundColor = 'blue';
+//   });
+// });
