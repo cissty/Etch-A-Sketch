@@ -43,11 +43,14 @@ body{
 
 #container{
     display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     min-height: 500px;
     min-width: 500px;
     box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
     margin-left: 60px;
     background-color: var(--secondary-light);
+    
     
     
 }
@@ -149,6 +152,7 @@ input[type='color']::-webkit-color-swatch {
   display: flex;
   flex-direction: column;
 }
+
 .value{
   align-self: center;
   font-size: 20px;
