@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/ca26679566.js" crossorigin="anonymous"></script>
 </head>
@@ -17,25 +20,27 @@
     <main>
         <div class="main-container">
             <div id="settings">
-                <input id="colorpicker" type="color" value="#333333" id="style">
-                <button id="Colormode" class="button">Color mode</button>
-                <button id="rainbow" class="button">Rainbow mode</button>
-                <button id="eraser" class="button">Eraser</button>
-                <button id="clear" class="button">Clear the box</button>
+                <input id="myColor" type="color" value="#FFFFFF">
                 <div class="rangediv">
-                    <div class="value">16 x 16</div>
-                <input type="range" id="range" min="1" max="64" value="16" step="1" class="drag">
+                    <div class="value">1 x 1</div>
+                <input type="range" id="range" min="1" max="64" value="1" step="1" class="drag">
                 </div>
             </div>
     
-            <div id="container"> </div>        
+            <div id="container"></div>   
+            
+            <div class="button-section">
+                <button id="colorMode" class="button">Color mode</button>
+                <button id="eraser" class="button">Eraser</button>
+                <button id="clear" class="button">Clear the box</button>
+            </div>
         </div>
     </main>
 
     <footer class="footer">
         <p><strong>Copyright © 2023 Cissty</strong></p>
         <a href="https://github.com/cissty" target="_blank">
-            <i class="fa-brands fa-github" style="color: #000000;" aria-hidden="true"></i>
+            <i class="fa-brands fa-github"></i>
         </a>
     </footer>
 </body>
